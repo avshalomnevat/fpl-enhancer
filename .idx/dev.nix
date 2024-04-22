@@ -16,17 +16,6 @@
         install =
           "python -m venv .venv         && source .venv/bin/activate         && pip install -r requirements.txt";
       };
-      # To run something each time the environment is rebuilt, use the `onStart` hook
-    };
-    # Enable previews and customize configuration
-    previews = {
-      enable = true;
-      previews = [{
-        command = [ "./devserver.sh" ];
-        env = { PORT = "$PORT"; };
-        id = "web";
-        manager = "web";
-      }];
     };
   };
 }
